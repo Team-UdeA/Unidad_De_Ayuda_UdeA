@@ -19,12 +19,11 @@ import NextLink from "next/link";
 import clsx from "clsx";
 
 import { ThemeSwitch } from "@/components/theme-switch";
-import {
+import InstagramIcon, {
 	TwitterIcon,
-	GithubIcon,
-	DiscordIcon,
 	HeartFilledIcon,
 	SearchIcon,
+	FacebookIcon,
 } from "@/components/icons";
 
 import { Logo } from "@/components/icons";
@@ -86,11 +85,11 @@ export const Navbar = () => {
 					<Link isExternal href={siteConfig.links.twitter} aria-label="Twitter">
 						<TwitterIcon className="text-default-500" />
 					</Link>
-					<Link isExternal href={siteConfig.links.discord} aria-label="Discord">
-						<DiscordIcon className="text-default-500" />
+					<Link isExternal href={siteConfig.links.facebook} aria-label="Discord">
+						<FacebookIcon className="text-default-500    " />
 					</Link>
-					<Link isExternal href={siteConfig.links.github} aria-label="Github">
-						<GithubIcon className="text-default-500" />
+					<Link isExternal href={siteConfig.links.instagram} aria-label="Github">
+						<InstagramIcon className="text-default-500" />
 					</Link>
 					<ThemeSwitch />
 				</NavbarItem>
@@ -100,7 +99,7 @@ export const Navbar = () => {
             isExternal
 						as={Link}
 						className="text-sm font-normal text-default-600 bg-default-100"
-						href={siteConfig.links.sponsor}
+						href={siteConfig.links.udea}
 						startContent={<HeartFilledIcon className="text-danger" />}
 						variant="flat"
 					>
@@ -111,7 +110,7 @@ export const Navbar = () => {
 
 			<NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
 				<Link isExternal href={siteConfig.links.github} aria-label="Github">
-					<GithubIcon className="text-default-500" />
+					<InstagramIcon className="text-default-500" />
 				</Link>
 				<ThemeSwitch />
 				<NavbarMenuToggle />
