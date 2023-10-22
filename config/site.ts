@@ -21,10 +21,9 @@ export const siteConfig = {
 	navMenuItems: [
 	],
 	links: {
-		github: "https://github.com/nextui-org/nextui",
-		twitter: "https://twitter.com/getnextui",
-		docs: "https://nextui.org",
-		discord: "https://discord.gg/9b6yyZKmH4",
-        sponsor: "https://www.udea.edu.co/"
+		instagram: "https://www.instagram.com/udea/",
+		twitter: "https://twitter.com/UdeA",
+		facebook: "https://www.facebook.com/universidaddeantioquia",
+        udea: "https://www.udea.edu.co/"
 	},
 };
