@@ -269,6 +269,21 @@
     "@react-types/button" "^3.7.4"
     "@react-types/shared" "^3.19.0"
 
+"@nextui-org/chip@^2.0.21":
+  version "2.0.21"
+  resolved "https://registry.yarnpkg.com/@nextui-org/chip/-/chip-2.0.21.tgz#640231bf73797edb19d62958a57a5edb70ea15e8"
+  integrity sha512-z5akLSpElF/j0b13hCywkRGWbI+9PEgawYMktLUnnokXRoUH7XOaq3XoP4Fa5rzBt4ajVButtXwxCsXc3izspQ==
+  dependencies:
+    "@nextui-org/react-utils" "2.0.9"
+    "@nextui-org/shared-icons" "2.0.4"
+    "@nextui-org/shared-utils" "2.0.3"
+    "@nextui-org/system" "2.0.10"
+    "@nextui-org/theme" "2.1.9"
+    "@react-aria/focus" "^3.14.1"
+    "@react-aria/interactions" "^3.18.0"
+    "@react-aria/utils" "^3.20.0"
+    "@react-types/checkbox" "^3.5.1"
+
 "@nextui-org/code@2.0.16":
   version "2.0.16"
   resolved "https://registry.yarnpkg.com/@nextui-org/code/-/code-2.0.16.tgz#f8700fe1916fb6ce28ca924bf7ba52fa5f5ce607"
@@ -404,6 +419,11 @@
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/@nextui-org/shared-icons/-/shared-icons-2.0.3.tgz#7d0ac9ce21af2b3a2dd70651f7b362c237cfdde1"
   integrity sha512-2ODlzPWW+iYM7Uf7XDkz7GlJ+dzsFo6cBHH9hbbZEOx2v7/wB8x3VvrZcQ4SASewSb18a/wzxP8MJFnIUCOCrQ==
+
+"@nextui-org/shared-icons@2.0.4":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@nextui-org/shared-icons/-/shared-icons-2.0.4.tgz#f5183c5da08abbb1025c95d6926975c44361e743"
+  integrity sha512-I0gzreq1E3ji+OSTtsOYBnbdLboHoCAzPa+r//Qkf16I2gq6xxjjkfeNXFdFJjouRnPCLtR5eihlxt/ozWK8oA==
 
 "@nextui-org/shared-utils@2.0.2":
   version "2.0.2"
@@ -648,7 +668,7 @@
     "@react-types/shared" "^3.21.0"
     "@swc/helpers" "^0.5.0"
 
-"@react-aria/focus@^3.14.0", "@react-aria/focus@^3.14.3":
+"@react-aria/focus@^3.14.0", "@react-aria/focus@^3.14.1", "@react-aria/focus@^3.14.3":
   version "3.14.3"
   resolved "https://registry.yarnpkg.com/@react-aria/focus/-/focus-3.14.3.tgz#5e66dbf47e1d92aebf67d52b3b08d1631591f5b6"
   integrity sha512-gvO/frZ7SxyfyHJYC+kRsUXnXct8hGHKlG1TwbkzCCXim9XIPKDgRzfNGuFfj0i8ZpR9xmsjOBUkHZny0uekFA==
@@ -673,7 +693,7 @@
     "@react-types/shared" "^3.21.0"
     "@swc/helpers" "^0.5.0"
 
-"@react-aria/interactions@^3.17.0", "@react-aria/interactions@^3.19.1":
+"@react-aria/interactions@^3.17.0", "@react-aria/interactions@^3.18.0", "@react-aria/interactions@^3.19.1":
   version "3.19.1"
   resolved "https://registry.yarnpkg.com/@react-aria/interactions/-/interactions-3.19.1.tgz#b17b1f9dc84624d4222c7fa0a4fa6b4c14fe125a"
   integrity sha512-2QFOvq/rJfMGEezmtYcGcJmfaD16kHKcSTLFrZ8aeBK6hYFddGVZJZk+dXf+G7iNaffa8rMt6uwzVe/malJPBA==
@@ -778,7 +798,7 @@
     "@react-types/tooltip" "^3.4.5"
     "@swc/helpers" "^0.5.0"
 
-"@react-aria/utils@^3.19.0", "@react-aria/utils@^3.21.1":
+"@react-aria/utils@^3.19.0", "@react-aria/utils@^3.20.0", "@react-aria/utils@^3.21.1":
   version "3.21.1"
   resolved "https://registry.yarnpkg.com/@react-aria/utils/-/utils-3.21.1.tgz#35f5d545757ea38f05a0d2f5492f13217ebb03ce"
   integrity sha512-tySfyWHXOhd/b6JSrSOl7krngEXN3N6pi1hCAXObRu3+MZlaZOMDf/j18aoteaIF2Jpv8HMWUJUJtQKGmBJGRA==
@@ -851,7 +871,7 @@
   dependencies:
     "@react-types/shared" "^3.21.0"
 
-"@react-types/checkbox@^3.5.2":
+"@react-types/checkbox@^3.5.1", "@react-types/checkbox@^3.5.2":
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/@react-types/checkbox/-/checkbox-3.5.2.tgz#f463befdd37bc2c9e5c6febd62e53131e8983fa4"
   integrity sha512-iRQrbY8vRRya3bt3i7sHAifhP/ozfkly1/TItkRK5MNPRNPRDKns55D8ZFkRMj4NSyKQpjVt1zzlBXrnSOxWdQ==
