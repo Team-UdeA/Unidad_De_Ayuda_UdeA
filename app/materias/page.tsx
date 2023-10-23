@@ -75,7 +75,7 @@ const callouts = [
 		imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-02-edition-02.jpg',
 		imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
 		href: '#',
-		chipTitle: 'Ecuaciones DyMN',
+		chipTitle: 'E. Diferenciales',
 	  },
 	  {
 		name: 'Travel',
@@ -108,15 +108,17 @@ const callouts = [
 					  <div
 						className="absolute top-4 left-4 z-10"
 						style={{
-						  background: 'linear-gradient(45deg, #6574cd, #f66d9b)',
-						  border: '1px solid white',
-						  boxShadow: '0 2px 5px rgba(255, 105, 180, 0.3)',
-						  borderRadius: '4px',
-						  color: 'white',
-						  padding: '4px',
+							width: '120px',
+
+						  	background: 'linear-gradient(45deg, #6574cd, #f66d9b)',
+						  	border: '1px solid white',
+						  	boxShadow: '0 2px 5px rgba(255, 105, 180, 0.3)',
+						  	borderRadius: '4px',
+						  	color: 'white',
+						  	padding: '4px',
 						}}
 					  >
-						{callout.chipTitle} {/* Utiliza el título personalizado del chip */}
+						<div style={{ textAlign: 'left' }}>{callout.chipTitle}</div> {/* Utiliza el título personalizado del chip */}
 					  </div>
 					</div>
 				  </div>
