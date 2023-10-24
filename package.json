@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "npx prettier -w ./app"
   },
   "dependencies": {
     "@nextui-org/button": "2.0.18",
@@ -42,6 +43,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
-    "@tailwindcss/aspect-ratio": "^0.4.2"
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "prettier": "3.0.3"
   }
 }
