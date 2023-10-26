@@ -11,7 +11,7 @@ const callouts = [
     imageSrc: "https://i.imgur.com/B7MoOlj.jpg",
     imageAlt:
       "Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.",
-    slug: "fisica",
+    slug: "descubriendo-la-fisica",
     chipTitle: "D. la Física",
   },
   {
@@ -20,7 +20,7 @@ const callouts = [
     imageSrc: "https://i.imgur.com/RMbJBv4.jpg",
     imageAlt:
       "Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.",
-    slug: "vectorial",
+    slug: "geometria-vectorial",
     chipTitle: "G. Vectorial",
   },
   {
@@ -28,7 +28,7 @@ const callouts = [
     description: "",
     imageSrc: "https://i.imgur.com/KuIceJr.jpg",
     imageAlt: "Collection of four insulated travel bottles on wooden shelf.",
-    slug: "diferencial",
+    slug: "calculo-diferencial",
     chipTitle: "C. Diferencial",
   },
   {
@@ -37,7 +37,7 @@ const callouts = [
     imageSrc: "https://i.imgur.com/GZjiTw0.jpg",
     imageAlt:
       "Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.",
-    slug: "algebra",
+    slug: "algebra-y-trigonometria",
     chipTitle: "Algebra y T",
   },
   {
@@ -46,7 +46,7 @@ const callouts = [
     imageSrc: "https://i.imgur.com/VNSapZE.jpg",
     imageAlt:
       "Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.",
-    slug: "lineal",
+    slug: "algebra-lineal",
     chipTitle: "A. Lineal",
   },
   {
@@ -54,7 +54,7 @@ const callouts = [
     description: "",
     imageSrc: "https://i.imgur.com/tASsRUz.jpg",
     imageAlt: "Collection of four insulated travel bottles on wooden shelf.",
-    slug: "integral",
+    slug: "calculo-integral",
     chipTitle: "C. Integral",
   },
   {
@@ -62,7 +62,7 @@ const callouts = [
     description: "",
     imageSrc: "https://i.imgur.com/uQ70PEL.jpg",
     imageAlt: "Collection of four insulated travel bottles on wooden shelf.",
-    slug: "mecanica",
+    slug: "fisica-mecanica",
     chipTitle: "F. Mecánica",
   },
   {
@@ -70,7 +70,7 @@ const callouts = [
     description: "",
     imageSrc: "https://i.imgur.com/yRy945s.jpg",
     imageAlt: "Collection of four insulated travel bottles on wooden shelf.",
-    slug: "teoria",
+    slug: "teoria-de-probabilida-y-colas",
     chipTitle: "Teoría  PyC",
   },
   {
@@ -78,7 +78,7 @@ const callouts = [
     description: "",
     imageSrc: "https://i.imgur.com/YMDKw8u.jpg",
     imageAlt: "Collection of four insulated travel bottles on wooden shelf.",
-    slug: "ecuaciones",
+    slug: "ecuaciones-diferenciales",
     chipTitle: "E. Diferenciales",
   },
   {
@@ -86,7 +86,7 @@ const callouts = [
     description: "",
     imageSrc: "https://i.imgur.com/Ku35Rzb.jpg",
     imageAlt: "Collection of four insulated travel bottles on wooden shelf.",
-    slug: "estadisticos",
+    slug: "metodos-estadisticos",
     chipTitle: "M. Estadísticos",
   },
 ];
