@@ -1,34 +1,44 @@
-'use client'
-import React from "react";
-import {Tabs, Tab} from "@nextui-org/tabs";
-import {Listbox, ListboxItem} from "@nextui-org/react";
+import React, { useState } from "react";
+import { Listbox, ListboxItem } from "@nextui-org/react";
 import { IconWrapper } from "@/components/IconWrapper";
-import { ItemCounter } from "@/components/ItemCounter";
 import { BugIcon } from "@/components/BugIcon";
 import { PullRequestIcon } from "@/components/PullRequestIcon";
 import { ChatIcon } from "@/components/ChatIcon";
 import { PlayCircleIcon } from "@/components/PlayCircleIcon";
 import { LayoutIcon } from "@/components/LayoutIcon";
-import {TagIcon} from "@/components/TagIcon"
-import { UsersIcon } from "@/components/UsersIcon";
-import { WatchersIcon } from "@/components/WatchersIcon";
-import { BookIcon } from "@/components/BookIcon";
-import { ChevronRightIcon } from "@/components/ChevronRightIcon";
-import {Card, CardHeader, CardBody, CardFooter, Divider, Link, Image} from "@nextui-org/react";
+import { useDispatch, useSelector } from 'react-redux';
+import { setSelectedItem } from '../redux/actions';
 
-export default function Sidebar(){
-    return(
-        <div>
-            <Listbox
+interface RootState {
+  selectedItem: string; // Asegúrate de que el tipo coincida con el estado en tu aplicación
+  // ... otros estados ...
+}
+
+export default function Sidebar() {
+
+  const selectedItem = useSelector((state:RootState) => state.selectedItem); // Accede al estado global
+  const dispatch = useDispatch();
+
+
+  const handleItemClick = (key: any) => {
+    // Despacha la acción para almacenar el nombre del elemento seleccionado en el estado global
+    dispatch(setSelectedItem(key as string)); // Convierte a string si es necesario
+  }
+  
+  
+  return (
+    <div>
+      <Listbox
         aria-label="User Menu"
-        onAction={(key) => alert(key)}
+        onAction={handleItemClick} // Cuando se hace clic, llama a la función handleItemClick
         className="p-0 gap-0 divide-y divide-default-300/50 dark:divide-default-100/80 bg-content1 max-w-[300px] overflow-visible shadow-small rounded-medium"
         itemClasses={{
-          base: "px-3 first:rounded-t-medium last:rounded-b-medium rounded-none gap-3 h-12 data-[hover=true]:bg-default-100/80",
+          base:
+            "px-3 first:rounded-t-medium last:rounded-b-medium rounded-none gap-3 h-12 data-[hover=true]:bg-default-100/80",
         }}
       >
         <ListboxItem
-          key="issues"          
+          key="clases"
           startContent={
             <IconWrapper className="bg-success/10 text-success">
               <BugIcon className="text-lg " />
@@ -78,6 +88,7 @@ export default function Sidebar(){
           Ejercicios
         </ListboxItem>
       </Listbox>
-        </div>
-    )
+      
+    </div>
+  );
 }

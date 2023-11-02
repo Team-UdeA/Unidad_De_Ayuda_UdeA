@@ -4,6 +4,8 @@ import Show from "@/components/Show";
 import Sidebar from "@/components/Sidebar";
 import CardSidebar from "@/components/CardSidebar";
 import TapPartial from "@/components/TabPartial";
+import { useDispatch, useSelector } from 'react-redux';
+
 
 interface ApiElement {
   nombre: string;
@@ -12,8 +14,13 @@ interface ApiElement {
   periodo: string;
   ruta: string;
 }
+interface RootState {
+  selectedItem: string; // Asegúrate de que el tipo coincida con el estado en tu aplicación
+  // ... otros estados ...
+}
 
 export default function Page({ params }: { params: { slug: string } }) {
+  const selectedItem = useSelector((state:RootState) => state.selectedItem);
   const [tabValue, setTabValue] = useState("");
   const [apiData, setApiData] = useState<ApiElement[]>([]);
   const [filteredData, setFilteredData] = useState<ApiElement[]>([]);
@@ -40,9 +47,14 @@ export default function Page({ params }: { params: { slug: string } }) {
     setTabValue(buttonText);
   };
 
+  React.useEffect(() => {
+    console.log('Estado de Redux:', selectedItem);
+  }, [selectedItem]);
+
   return (
     <div>
       My Post: {params.slug}
+      <p>Item seleccionado: {selectedItem}</p>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <button className="bg-green-500 text-white px-4 py-2 rounded" onClick={() => handleButtonClick('Parcial 1')}>Parcial 1</button>
         <button className="bg-green-500 text-white px-4 py-2 rounded" onClick={() => handleButtonClick('Parcial 2')}>Parcial 2</button>
