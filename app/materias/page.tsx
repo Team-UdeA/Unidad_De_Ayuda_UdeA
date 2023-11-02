@@ -102,44 +102,38 @@ export default function Materias() {
           <div className="mt-6 space-y-12 lg:grid lg:grid-cols-5 lg:gap-x-6 lg:space-y-0">
             {callouts.map((callout,i) => (
               <div key={i} className="group relative">
-                <div className="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 sm:h-64">
+                <div className="relative h-80 w-full overflow-hidden mt-10 rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 sm:h-64">
                   <div className="relative">
-                    <Image
-                      isZoomed
-                      width={240}
-                      style={{ height: "320px" }}
-                      src={callout.imageSrc}
-                      alt={callout.imageAlt}
-                    />
-                    <div
-                      className="absolute top-4 left-4 z-10"
-                      style={{
-                        width: "120px",
+                      <Link href={"/materias/" + callout.slug}>
+                        <Image
+                          isZoomed
+                          width={240}
+                          style={{ height: "320px"}}
+                          src={callout.imageSrc}
+                          alt={callout.imageAlt}
+                        />
+                        <div
+                          className="absolute top-4 left-4 z-10"
+                          style={{
+                            width: "120px",
 
-                        background: "linear-gradient(45deg, #6574cd, #f66d9b)",
-                        border: "1px solid white",
-                        boxShadow: "0 2px 5px rgba(255, 105, 180, 0.3)",
-                        borderRadius: "4px",
-                        color: "white",
-                        padding: "4px",
-                      }}
-                    >
-                      <div style={{ textAlign: "left" }}>
-                        {callout.chipTitle}
-                      </div>{" "}
-                      {/* Utiliza el título personalizado del chip */}
-                    </div>
+                            background: "linear-gradient(45deg, #6574cd, #f66d9b)",
+                            border: "1px solid white",
+                            boxShadow: "0 2px 5px rgba(255, 105, 180, 0.3)",
+                            borderRadius: "4px",
+                            color: "white",
+                            padding: "4px",
+                            marginTop: "10px",
+                          }}
+                        >
+                          <div style={{ textAlign: "left" }}>
+                            {callout.chipTitle}
+                          </div>{" "}
+                          {/* Utiliza el título personalizado del chip */}
+                        </div>
+                      </Link>
                   </div>
                 </div>
-                <h3 className="mt-6 text-sm text-gray-500">
-                  <Link href={"/materias/" + callout.slug}>
-                    <span className="absolute inset-0" />
-                    {callout.name}
-                  </Link>
-                </h3>
-                <p className="text-base font-semibold text-gray-900">
-                  {callout.description}
-                </p>
               </div>
             ))}
           </div>
