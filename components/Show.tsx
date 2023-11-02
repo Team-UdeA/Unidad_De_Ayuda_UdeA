@@ -10,6 +10,7 @@ interface Element {
 
 }
 
+
 const getData =async () => {
     try {
         const response = await fetch(`${process.env.URI}`, {cache:"no-store"})
@@ -19,9 +20,12 @@ const getData =async () => {
     }
 };
 
-const Show = async () => {
+const Show = async (params: {slug: string}) => {
     const {data} = await getData();
+
     return (
+    <div>
+        My Post: {params.slug}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {data.map((element: Element) => (
                 <div className="p-3 shadow-lg shadow-indigo-500/50 my-4 flex justify-between gap-4 items-start key={element._id}">
@@ -33,6 +37,7 @@ const Show = async () => {
                 </div>
             ))}
         </div>
+    </div>
     )
 }
 

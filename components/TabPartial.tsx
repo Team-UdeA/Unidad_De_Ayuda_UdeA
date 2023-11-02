@@ -1,5 +1,5 @@
 'use client'
-import React from "react";
+import React, { useState } from "react";
 import {Tabs, Tab} from "@nextui-org/react";
 
 export default function TapPartial(){
