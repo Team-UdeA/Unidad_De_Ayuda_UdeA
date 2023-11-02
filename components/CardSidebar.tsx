@@ -21,7 +21,7 @@ export default function CardSidebar(){
         </CardHeader>
         <Divider/>
         <CardBody>
-          <p>Make beautiful websites regardless of your design experience.</p>
+          <p>P1 23 Enero</p>
         </CardBody>
         <Divider/>
         <CardFooter>
@@ -30,7 +30,7 @@ export default function CardSidebar(){
             showAnchorIcon
             href="https://github.com/nextui-org/nextui"
           >
-            Visit source code on GitHub.
+            Ver calendario Oficial
           </Link>
         </CardFooter>
       </Card>
