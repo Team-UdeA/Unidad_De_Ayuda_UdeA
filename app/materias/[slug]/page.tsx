@@ -14,14 +14,15 @@ interface ApiElement {
   periodo: string;
   ruta: string;
 }
+
 interface RootState {
-  selectedItem: string; // Asegúrate de que el tipo coincida con el estado en tu aplicación
+  selectedItem: string;
   // ... otros estados ...
 }
 
 export default function Page({ params }: { params: { slug: string } }) {
-  const selectedItem = useSelector((state:RootState) => state.selectedItem);
-  const [tabValue, setTabValue] = useState("");
+  const selectedItem = useSelector((state: RootState) => state.selectedItem);
+  const [tabValue, setTabValue] = useState(""); // Inicializa tabValue con un valor vacío
   const [apiData, setApiData] = useState<ApiElement[]>([]);
   const [filteredData, setFilteredData] = useState<ApiElement[]>([]);
 
@@ -34,16 +35,22 @@ export default function Page({ params }: { params: { slug: string } }) {
   }, []);
 
   useEffect(() => {
-    if (tabValue === "") {
-      setFilteredData(apiData);
-    } else {
-      const filtered = apiData.filter((item) => item.periodo.includes(tabValue));
+    if (tabValue) { // Verifica si tabValue no está vacío
+      const filtered = apiData.filter((item) => {
+        return (
+          item.materia.includes(params.slug) &&
+          item.tipo.includes(selectedItem) &&
+          item.periodo.includes(tabValue)
+        );
+      });
+
       setFilteredData(filtered);
+    } else {
+      setFilteredData([]); // No muestra nada si tabValue está vacío
     }
-  }, [tabValue, apiData]);
+  }, [tabValue, apiData, params.slug, selectedItem]);
 
   const handleButtonClick = (buttonText: string) => {
-    console.log(`Clic en el botón "${buttonText}"`);
     setTabValue(buttonText);
   };
 

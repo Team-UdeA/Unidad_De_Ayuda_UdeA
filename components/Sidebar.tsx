@@ -38,7 +38,7 @@ export default function Sidebar() {
         }}
       >
         <ListboxItem
-          key="clases"
+          key="clase"
           startContent={
             <IconWrapper className="bg-success/10 text-success">
               <BugIcon className="text-lg " />
@@ -48,7 +48,7 @@ export default function Sidebar() {
           Clases
         </ListboxItem>
         <ListboxItem
-          key="pull_requests"
+          key="taller"
           startContent={
             <IconWrapper className="bg-primary/10 text-primary">
               <PullRequestIcon className="text-lg " />
@@ -58,7 +58,7 @@ export default function Sidebar() {
           Talleres
         </ListboxItem>
         <ListboxItem
-          key="discussions"
+          key="parcial"
           startContent={
             <IconWrapper className="bg-secondary/10 text-secondary">
               <ChatIcon className="text-lg " />
@@ -68,7 +68,7 @@ export default function Sidebar() {
           Parciales
         </ListboxItem>
         <ListboxItem
-          key="actions"
+          key="video"
           startContent={
             <IconWrapper className="bg-warning/10 text-warning">
               <PlayCircleIcon className="text-lg " />
@@ -78,7 +78,7 @@ export default function Sidebar() {
           Videos
         </ListboxItem>
         <ListboxItem
-          key="projects"
+          key="ejercicio"
           startContent={
             <IconWrapper className="bg-default/50 text-foreground">
               <LayoutIcon className="text-lg " />
