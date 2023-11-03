@@ -16,6 +16,12 @@ interface ApiElement {
   periodo: string;
   ruta: string;
   img:string;
+  parcial:{
+    fecha1: string;
+    fecha2: string;
+    fecha3: string;
+    fecha4: string;
+  };
 }
 
 interface RootState {
@@ -102,7 +108,7 @@ export default function Page({ params }: { params: { slug: string } }) {
         </div>
 
         <div className="w-1/5 bg-green-500">
-          <CardSidebar />
+          <CardSidebar slug={params.slug}/>
         </div>
       </div>
     </div>
