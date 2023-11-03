@@ -70,44 +70,45 @@ export default function Page({ params }: { params: { slug: string } }) {
   return (
     <div>
       My Post: {params.slug}
-      <p>Item seleccionado: {selectedItem}</p>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', marginBottom:'8px'}}>
         <button className="bg-green-500 text-white px-4 py-2 rounded" onClick={() => handleButtonClick('Parcial 1')}>Parcial 1</button>
         <button className="bg-green-500 text-white px-4 py-2 rounded" onClick={() => handleButtonClick('Parcial 2')}>Parcial 2</button>
         <button className="bg-green-500 text-white px-4 py-2 rounded" onClick={() => handleButtonClick('Parcial 3')}>Parcial 3</button>
         <button className="bg-green-500 text-white px-4 py-2 rounded" onClick={() => handleButtonClick('Parcial 4')}>Parcial 4</button>
       </div>
 
-      <div className="flex" style={{ height: '100vh' }}>
-        <div className="w-1/5 bg-red-700" >
+      <div className="flex" style={{ height: '450px' }}>
+        <div className="w-1/5  ml-3 mr-3" >
           <Sidebar />
         </div>
-
-        <div className="w-3/5 bg-blue-500   ">
-          <div className="w-500  gap-5 h-500 m-10 grid grid-cols-2 sm:grid-cols-3" style={{ justifyContent: 'center' }}>
+        
+        <div className="w-3/5 p-5 pt-0  overflow-auto ">
+          <div className="w-500  gap-5 h-500  grid grid-cols-2 sm:grid-cols-3 " style={{ justifyContent: 'center' }}>
             {filteredData.map((item, index) => (
-              <Link className="w-full h-full" href={item.ruta} target="_blank">
+              
                 <Card shadow="sm" key={index} isPressable onPress={() => console.log("item pressed")}>
-                  <CardBody className="overflow-visible p-0">
-                    <Image
-                      shadow="sm"
-                      radius="lg"
-                      width="100%"
-                      alt={item.nombre}
-                      className="w-full object-cover h-[140px]"
-                      src={item.img}
-                    />
-                  </CardBody>
-                  <CardFooter className="text-small justify-between">
-                    <b>{item.nombre}</b>
-                  </CardFooter>
+                  <Link className="w-full" href={item.ruta} target="_blank">
+                    <CardBody className="overflow-visible p-0">
+                      <Image
+                        shadow="sm"
+                        radius="lg"
+                        width="100%"
+                        alt={item.nombre}
+                        className="w-full object-cover h-[140px]"
+                        src={item.img}
+                      />
+                    </CardBody>
+                    <CardFooter className="text-small justify-between">
+                      <b>{item.nombre}</b>
+                    </CardFooter>
+                  </Link>
                 </Card>
-              </Link>
+              
             ))}
           </div>
         </div>
 
-        <div className="w-1/5 bg-green-500">
+        <div className="w-1/5 mr-3 ml-3">
           <CardSidebar slug={params.slug}/>
         </div>
       </div>
