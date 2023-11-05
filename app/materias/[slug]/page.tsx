@@ -7,6 +7,8 @@ import TapPartial from "@/components/TabPartial";
 import { useSelector } from 'react-redux';
 import {Card, CardBody, CardFooter, Image} from "@nextui-org/react";
 import Link from "next/link";
+import { Button } from "@nextui-org/button";
+import { button } from "@nextui-org/theme";
 
 
 interface ApiElement {
@@ -34,6 +36,7 @@ export default function Page({ params }: { params: { slug: string } }) {
   const [tabValue, setTabValue] = useState(""); // Inicializa tabValue con un valor vacío
   const [apiData, setApiData] = useState<ApiElement[]>([]);
   const [filteredData, setFilteredData] = useState<ApiElement[]>([]);
+  const [activeButton, setActiveButton] = useState<string | null>(null);
 
   useEffect(() => {
     fetch("https://6513538b8e505cebc2e9c6bc.mockapi.io/api/v1/recursos")
@@ -61,6 +64,11 @@ export default function Page({ params }: { params: { slug: string } }) {
 
   const handleButtonClick = (buttonText: string) => {
     setTabValue(buttonText);
+    if (activeButton === buttonText) {
+      setActiveButton(buttonText);
+    } else {
+      setActiveButton(buttonText);
+    }
   };
 
   React.useEffect(() => {
@@ -70,11 +78,36 @@ export default function Page({ params }: { params: { slug: string } }) {
   return (
     <div>
       My Post: {params.slug}
-      <div style={{ display: 'flex', justifyContent: 'center', marginBottom:'8px'}}>
-        <button className="bg-green-500 text-white px-4 py-2 rounded" onClick={() => handleButtonClick('Parcial 1')}>Parcial 1</button>
-        <button className="bg-green-500 text-white px-4 py-2 rounded" onClick={() => handleButtonClick('Parcial 2')}>Parcial 2</button>
-        <button className="bg-green-500 text-white px-4 py-2 rounded" onClick={() => handleButtonClick('Parcial 3')}>Parcial 3</button>
-        <button className="bg-green-500 text-white px-4 py-2 rounded" onClick={() => handleButtonClick('Parcial 4')}>Parcial 4</button>
+      <div className="flex justify-center mb-5">
+        <Button 
+          variant={activeButton === 'Parcial 1' ? 'flat' : undefined}
+          className="text-white px-4 py-2 rounded mr-2" 
+          color="success" 
+          onClick={() => handleButtonClick('Parcial 1')}
+        >
+          Parcial 1
+        </Button>
+        <Button
+          variant={activeButton === 'Parcial 2' ? 'flat' : undefined}
+          className="text-white px-4 py-2 rounded mr-2"
+          color="success" onClick={() => handleButtonClick('Parcial 2')}
+        >
+          Parcial 2
+        </Button>
+        <Button
+          variant={activeButton === 'Parcial 3' ? 'flat' : undefined}
+          className="text-white px-4 py-2 rounded mr-2"
+          color="success" onClick={() => handleButtonClick('Parcial 3')}
+        >
+          Parcial 3
+        </Button>
+        <Button 
+          variant={activeButton === 'Parcial 4' ? 'flat' : undefined}
+          className="text-white px-4 py-2 rounded"
+          color="success" onClick={() => handleButtonClick('Parcial 4')}
+        >
+          Parcial 4
+        </Button>
       </div>
 
       <div className="flex" style={{ height: '450px' }}>
