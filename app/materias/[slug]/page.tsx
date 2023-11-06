@@ -115,7 +115,7 @@ export default function Page({ params }: { params: { slug: string } }) {
           <Sidebar />
         </div>
         
-        <div className="w-3/5 p-5 pt-0  overflow-auto ">
+        <div className="w-3/5 p-5 pt-0  overflow-auto rounded-large">
           <div className="w-500  gap-5 h-500  grid grid-cols-2 sm:grid-cols-3 " style={{ justifyContent: 'center' }}>
             {filteredData.map((item, index) => (
               

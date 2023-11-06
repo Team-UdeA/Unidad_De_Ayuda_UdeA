@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from "react";
 import { Card, CardHeader, CardBody, CardFooter, Divider, Link, Image } from "@nextui-org/react";
-
+import {Chip} from "@nextui-org/react";
 // Definir una interfaz para la respuesta de la API
 interface Recurso {
   materia: string;
@@ -12,6 +12,7 @@ interface Recurso {
     fecha4: string;
   };
 }
+const color = ["primary","secondary","success","warning"];
 
 // Definir una función para realizar la solicitud a la API
 async function fetchData(slug: string): Promise<Recurso | undefined> {
@@ -51,19 +52,24 @@ export default function CardSidebar({ slug }: { slug: string }) {
             width={40}
           />
           <div className="flex flex-col">
-            <p className="text-md">NextUI</p>
-            <p className="text-small text-default-500">nextui.org</p>
+            <p className="text-md">Parciales</p>
           </div>
         </CardHeader>
         <Divider />
         <CardBody>
           {parcialDates.length > 0 && (
             <div>
-              <p>Fechas de parciales:</p>
               <ul>
-                {parcialDates.map((date, index) => (
-                  <li key={index}>{date}</li>
-                ))}
+                  {parcialDates.map((date, index) => (
+                    <div className="flex gap-4 ">
+                      <div className="space-y-6">
+                        <Chip color={color[index]} className=" mr-5 " variant="dot">Parcial {1+index}</Chip>
+                        <Chip color={color[index]} className="text-white" variant="shadow">
+                        <li key={index}>{date}</li>
+                        </Chip>
+                      </div>
+                    </div>
+                  ))}
               </ul>
             </div>
           )}
