@@ -7,11 +7,14 @@ import { button as buttonStyles } from "@nextui-org/theme";
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import TextAnimation from "@/components/TextAnimation";
+import MathSymbolAnimation from "@/components/MathSymbolAnimation";
 
 export default function Home() {
   return (
       <div className="text-center">
           <h1>Home</h1>
+          <TextAnimation />
+          <MathSymbolAnimation />
       </div>
 
 
