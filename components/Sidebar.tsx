@@ -31,7 +31,7 @@ export default function Sidebar() {
       <Listbox
         aria-label="User Menu"
         onAction={handleItemClick} // Cuando se hace clic, llama a la función handleItemClick
-        className="p-0 gap-0 divide-y divide-default-300/50 dark:divide-default-100/80 bg-content1 max-w-[300px] overflow-visible shadow-small rounded-medium"
+        className="p-0 gap-0 divide-y divide-default-300/50 dark:divide-default-100/80 bg-content1 max-w-[300px] overflow-visible shadow-small rounded-medium h-[540px]"
         itemClasses={{
           base:
             "px-3 first:rounded-t-medium last:rounded-b-medium rounded-none gap-3 h-12 data-[hover=true]:bg-default-100/80",
@@ -44,6 +44,9 @@ export default function Sidebar() {
               <BugIcon className="text-lg " />
             </IconWrapper>
           }
+          className={`${
+            selectedItem === "clase" ? "pointer-events-none bg-gray-400 text-gray-600" : ""
+          }`}
         >
           Clases
         </ListboxItem>
@@ -54,6 +57,9 @@ export default function Sidebar() {
               <PullRequestIcon className="text-lg " />
             </IconWrapper>
           }
+          className={`${
+            selectedItem === "taller" ? "pointer-events-none bg-gray-400 text-gray-600" : ""
+          }`}
         >
           Talleres
         </ListboxItem>
@@ -64,6 +70,9 @@ export default function Sidebar() {
               <ChatIcon className="text-lg " />
             </IconWrapper>
           }
+          className={`${
+            selectedItem === "parcial" ? "pointer-events-none bg-gray-400 text-gray-600" : ""
+          }`}
         >
           Parciales
         </ListboxItem>
@@ -74,6 +83,9 @@ export default function Sidebar() {
               <PlayCircleIcon className="text-lg " />
             </IconWrapper>
           }
+          className={`${
+            selectedItem === "video" ? "pointer-events-none bg-gray-400 text-gray-600" : ""
+          }`}
         >
           Videos
         </ListboxItem>
@@ -84,6 +96,9 @@ export default function Sidebar() {
               <LayoutIcon className="text-lg " />
             </IconWrapper>
           }
+          className={`${
+            selectedItem === "ejercicio" ? "pointer-events-none bg-gray-400 text-gray-600" : ""
+          }`}
         >
           Ejercicios
         </ListboxItem>

@@ -8,7 +8,7 @@ const TextAnimation = () => {
   const spaceColor = 'white';
   const moveDistance = 10;
 
-  const text = 'Unidad de Ayuda';
+  const text = '¡Unidad de Ayuda UdeA!';
 
   const initialVariants = {
     rest: { y: 0, opacity: 0 },

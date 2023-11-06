@@ -110,7 +110,7 @@ export default function Page({ params }: { params: { slug: string } }) {
         </Button>
       </div>
 
-      <div className="flex" style={{ height: '450px' }}>
+      <div className="flex" style={{ height: '540px' }}>
         <div className="w-1/5  ml-3 mr-3" >
           <Sidebar />
         </div>
