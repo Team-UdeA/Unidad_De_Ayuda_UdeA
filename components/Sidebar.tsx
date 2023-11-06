@@ -45,7 +45,7 @@ export default function Sidebar() {
             </IconWrapper>
           }
           className={`${
-            selectedItem === "clase" ? "pointer-events-none bg-gray-400 text-gray-600" : ""
+            selectedItem === "clase" ? "pointer-events-none bg-success" : ""
           }`}
         >
           Clases
@@ -58,7 +58,7 @@ export default function Sidebar() {
             </IconWrapper>
           }
           className={`${
-            selectedItem === "taller" ? "pointer-events-none bg-gray-400 text-gray-600" : ""
+            selectedItem === "taller" ? "pointer-events-none bg-success" : ""
           }`}
         >
           Talleres
@@ -71,7 +71,7 @@ export default function Sidebar() {
             </IconWrapper>
           }
           className={`${
-            selectedItem === "parcial" ? "pointer-events-none bg-gray-400 text-gray-600" : ""
+            selectedItem === "parcial" ? "pointer-events-none bg-success" : ""
           }`}
         >
           Parciales
@@ -84,7 +84,7 @@ export default function Sidebar() {
             </IconWrapper>
           }
           className={`${
-            selectedItem === "video" ? "pointer-events-none bg-gray-400 text-gray-600" : ""
+            selectedItem === "video" ? "pointer-events-none bg-success" : ""
           }`}
         >
           Videos
@@ -97,7 +97,7 @@ export default function Sidebar() {
             </IconWrapper>
           }
           className={`${
-            selectedItem === "ejercicio" ? "pointer-events-none bg-gray-400 text-gray-600" : ""
+            selectedItem === "ejercicio" ? "pointer-events-none bg-success" : ""
           }`}
         >
           Ejercicios
