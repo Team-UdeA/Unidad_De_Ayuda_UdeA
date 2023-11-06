@@ -10,6 +10,7 @@
     "format": "npx prettier -w ./app"
   },
   "dependencies": {
+    "@chatscope/chat-ui-kit-react": "^1.10.1",
     "@nextui-org/button": "2.0.18",
     "@nextui-org/chip": "^2.0.21",
     "@nextui-org/code": "2.0.16",

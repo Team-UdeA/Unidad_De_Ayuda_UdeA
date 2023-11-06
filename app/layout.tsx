@@ -31,21 +31,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="overflow-hidden " suppressHydrationWarning>
+    <html lang="en" className="overflow-hidden" suppressHydrationWarning>
       <head />
       <body
         className={clsx(
-          "min-h-screen bg-background font-sans antialiased ",
+          "min-h-screen bg-background font-sans antialiased",
           fontSans.variable,
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
             <div className="relative flex flex-col h-screen ">
               <Navbar />
-              <main className="">
+              <main className="overflow-auto rounded-large">
                 {children}
               </main>
-              <footer className="w-full flex items-center justify-center pb-0 pt-5">
+              <footer className="w-full flex items-center justify-center pb-0">
                 <Link
                   isExternal
                   className="flex items-center gap-1 text-current"
