@@ -1,55 +1,58 @@
 import React from "react";
 import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
 
 const TextAnimation = () => {
-  const fontSize = '3rem';
-  const textColor = 'green';
-  const spaceColor = 'white';
-  const moveDistance = 10;
+  const titleText = "Unidad de Ayuda UdeA";
 
-  const text = '¡Unidad de Ayuda UdeA!';
-
-  const initialVariants = {
-    rest: { y: 0, opacity: 0 },
+  const wordVariants = {
+    hover: {
+      backgroundColor: '#0E793C', 
+      scale: 1.1,
+      transition: { duration: 0.2 },
+    },
   };
 
-  const spaceVariants = {
-    rest: { display: 'inline', opacity: 1 },
+  const letterVariants = {
+    hover: {
+      rotate: [0, -5, 5, -5, 5, 0],
+    },
   };
 
-  const animateVariants = {
-    rest: { y: 0, opacity: 1 },
+  const wordStyles = {
+    fontFamily: 'Times New Roman', 
+    color: 'white', 
   };
 
-  const [isInitialAnimationComplete, setInitialAnimationComplete] = useState(false);
-
-  useEffect(() => {
-    const initialAnimationTimer = setTimeout(() => {
-      setInitialAnimationComplete(true);
-    }, 1000); // 1 segundo de duración para la animación inicial
-
-    return () => clearTimeout(initialAnimationTimer);
-  }, []);
+  const greenTextStyles = {
+    fontFamily: 'Times New Roman', 
+    color: '#0E793C', 
+  };
 
   return (
-    <motion.h1 style={{ fontSize, fontFamily: 'sans-serif' }}>
-      {text.split('').map((character, index) => (
+    <motion.div className="flex space-x-2 justify-center">
+      {titleText.split(" ").map((word, wordIndex) => (
         <motion.span
-          key={index}
-          variants={character === ' ' ? spaceVariants : isInitialAnimationComplete ? animateVariants : initialVariants}
-          initial={isInitialAnimationComplete ? 'rest' : 'rest'}
-          animate="rest"
-          whileHover={{ y: -moveDistance, transition: { duration: 0.3, damping: 20 } }} // Ajusta la duración y el amortiguamiento
-          style={{
-            display: 'inline-block',
-            color: character === ' ' ? spaceColor : textColor,
-          }}
+          key={wordIndex}
+          variants={word === 'UdeA' ? wordVariants : {}}
+          whileHover="hover"
+          className="relative"
+          style={word === 'UdeA' ? { ...wordStyles, backgroundColor: '#0E793C' } : wordStyles}
         >
-          {character}
+          {word.split("").map((letter, letterIndex) => (
+            <motion.span
+              key={letterIndex}
+              className={word === 'UdeA' ? 'text-3xl font-bold p-1' : 'text-3xl font-bold inline-block'}
+              variants={letterVariants}
+              whileHover="hover"
+              style={word === 'UdeA' ? wordStyles : greenTextStyles}
+            >
+              {letter}
+            </motion.span>
+          ))}
         </motion.span>
       ))}
-    </motion.h1>
+    </motion.div>
   );
 };
-  export default TextAnimation;
+
+export default TextAnimation;
