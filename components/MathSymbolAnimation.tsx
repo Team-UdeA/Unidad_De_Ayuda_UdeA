@@ -13,8 +13,8 @@ const MathSymbolAnimation = () => {
   const generateRandomSymbol = (symbol, index) => {
     return {
       symbol,
-      x: getRandomInt(0, window.innerWidth),
-      y: getRandomInt(0, window.innerHeight),
+      x: 0,
+      y: 0,
       rotate: getRandomInt(0, 360),
       scale: 1,
       directionX: getRandomInt(0, 1) === 0 ? -1 : 1,
@@ -41,6 +41,20 @@ const MathSymbolAnimation = () => {
   };
 
   useEffect(() => {
+    const initializeSymbols = () => {
+      setSymbolStates((prevStates) =>
+        prevStates.map((symbolState) => {
+          return {
+            ...symbolState,
+            x: getRandomInt(0, window.innerWidth),
+            y: getRandomInt(0, window.innerHeight),
+          };
+        })
+      );
+    };
+
+    initializeSymbols();
+
     const moveSymbols = () => {
       setSymbolStates((prevStates) =>
         prevStates.map((symbolState) => {

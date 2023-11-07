@@ -3,6 +3,7 @@ import { Code } from "@nextui-org/code";
 import TextAnimation from "@/components/TextAnimation";
 import MathSymbolAnimation from "@/components/MathSymbolAnimation";
 import { Textarea } from "@nextui-org/react";
+import { motion, useAnimation } from 'framer-motion';
 
 export default function Home() {
   return (
@@ -17,19 +18,19 @@ export default function Home() {
             ser un desafío, y estamos aquí para facilitar tu camino hacia el éxito académico.
           </Code>
         </div>
-        <div className="flex gap-10 items-center h-screen mx-auto">
+        <div className="flex gap-5 items-center h-screen mx-auto w-full m-5">
           <Textarea
             isReadOnly
-            label="Recursos de Ayuda: "
+            label="Asesoría Personalizada"
             variant="bordered"
             labelPlacement="outside"
             placeholder="Enter your description"
             defaultValue="No estás solo en este viaje. Si necesitas orientación académica o consejos específicos, nuestro equipo de asesores está listo para ayudarte. Puedes ponerte en contacto con ellos a través de nuestro sistema de soporte."
-            className="max-w-md"
+            className="m-5"
           />
           <Textarea
             isReadOnly
-            label="Asesoría Personalizada: "
+            label="Recursos de Ayuda"
             variant="bordered"
             labelPlacement="outside"
             placeholder="Enter your description"
@@ -38,12 +39,12 @@ export default function Home() {
           />
           <Textarea
             isReadOnly
-            label="Comunidad de Estudiantes: "
+            label="Comunidad de Estudiantes"
             variant="bordered"
             labelPlacement="outside"
             placeholder="Enter your description"
             defaultValue="Conéctate con tus compañeros de clase, comparte experiencias y resuelve dudas en nuestro espacio de comunidad. Juntos, podemos superar cualquier obstáculo."
-            className="max-w-md"
+            className="m-5"
           />
         </div>
         <div className="m-5 ml-auto mt-auto">
