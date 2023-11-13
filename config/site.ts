@@ -10,11 +10,12 @@ export const siteConfig = {
 		},
     {
       label: "Materias",
-      href: "/docs",
+      href: "/materias",
     },
     {
       label: "Fechas De Examenes",
-      href: "/pricing",
+      href: "/examenes",
+
     },
 
 	],

@@ -12,5 +12,8 @@ module.exports = {
     extend: {},
   },
   darkMode: "class",
-  plugins: [nextui()],
+  corePlugins: {
+    aspectRatio: false,
+  },
+  plugins: [nextui(), require('@tailwindcss/aspect-ratio')],
 }
