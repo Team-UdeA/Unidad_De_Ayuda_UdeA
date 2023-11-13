@@ -1,3 +1,4 @@
+
 'use client'
 import TitleHome from "@/components/TitleHome";
 import AchievementsSection from "@/components/AchievementsSection";
@@ -18,4 +19,5 @@ export default function Home() {
       </div>
     </main>
   );
+
 }
