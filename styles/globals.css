@@ -12,5 +12,8 @@
 #gradiente{
   background: linear-gradient(to bottom right, #BDB2FF, #A3EAA3);
 }
-
+.rounded-large 
+{
+  border-radius: 0px;
+}
 
