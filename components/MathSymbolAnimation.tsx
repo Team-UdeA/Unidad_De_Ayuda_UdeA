@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 
 const MathSymbolAnimation = () => {
-  const symbols = ['∫', '∞', '∑', 'π', '√', 'Σ', '∇', '∆', '∉', '∪', '∩', '∂','K',];
+  const symbols = ['∫', '∞', '∑', 'π', '√', 'Σ', '∇', '∆', '∉', '∪', '∩', '∂'];
   const colors = ['#FF5733', '#FFC300', '#3369E7', '#FF4136', '#3D9970', '#FF851B', '#B10DC9', '#0074D9'];
   const numSymbols = 50;
   const bounceStrength = 10;

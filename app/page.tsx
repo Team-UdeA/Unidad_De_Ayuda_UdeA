@@ -9,7 +9,7 @@ import MathSymbolAnimation from "@/components/MathSymbolAnimation";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-[#040f04]">
+    <main className="flex min-h-screen flex-col   dark:bg-[#000000]  text-black" >
       <div className="container mt-24 mx-auto px-12 py-4">
         <MathSymbolAnimation/>
         <HeroSection />

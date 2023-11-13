@@ -8,7 +8,7 @@ import einsteinImage from "./img/einstein.jpg";
 const HeroSection = () => {
   return (
     <section className="lg:py-16">
-      <div className="grid grid-cols-1 sm:grid-cols-12">
+      <div className="grid grid-cols-1 sm:grid-cols-12 ">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -22,7 +22,7 @@ const HeroSection = () => {
             <br></br>
             <TypeAnimation
               sequence={[
-                "Judy",
+                "Recuerda...",
                 1000,
                 "El Genio se hace",
                 1000,
@@ -34,6 +34,7 @@ const HeroSection = () => {
               wrapper="span"
               speed={50}
               repeat={Infinity}
+              className="light light:text-black  dark dark:text-white"
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
