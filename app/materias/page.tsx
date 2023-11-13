@@ -92,10 +92,10 @@ const callouts = [
 ];
 export default function Materias() {
   return (
-    <div className="bg-gray-100 rounded-large">
+    <div className="dark:bg-[#000000] rounded-large">
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-10">
-          <h2 className="text-2xl font-bold text-gray-900">
+          <h2 className="text-2xl font-bold light light:text-black  dark dark:text-white">
             Materias Tronco Común
           </h2>
 
