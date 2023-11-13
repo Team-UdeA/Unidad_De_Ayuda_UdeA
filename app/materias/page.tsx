@@ -1,7 +1,5 @@
-import { title } from "@/components/primitives";
 import React from "react";
 import { Image } from "@nextui-org/image";
-import { Chip } from "@nextui-org/chip";
 import Link from "next/link";
 
 const callouts = [
@@ -95,23 +93,26 @@ export default function Materias() {
     <div className="dark:bg-[#000000] rounded-large">
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-10">
-          <h2 className="text-2xl font-bold light light:text-black  dark dark:text-white">
+          <h1 className="light light:text-black  dark dark:text-white mb-4 text-4xl sm:text-5xl lg:text-5xl lg:leading-normal font-extrabold">
             Materias Tronco Común
+          </h1>
+          <h2 className="text-2xl font-bold light light:text-black  dark dark:text-white">
+            
           </h2>
 
           <div className="mt-6 space-y-12 lg:grid lg:grid-cols-5 lg:gap-x-6 lg:space-y-0">
             {callouts.map((callout,i) => (
               <div key={i} className="group relative">
-                <div className="relative h-80 w-full overflow-hidden mt-10 rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 sm:h-64">
+                <div className="relative h-80 w-full overflow-hidden rounded-lg mt-10  bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 sm:h-64">
                   <div className="relative">
-                      <Link href={"/materias/" + callout.slug}>
+                      <Link href={"/materias/" + callout.slug} className="rounded-lg">
                         <Image
                           isZoomed
                           width={240}
                           style={{ height: "320px"}}
                           src={callout.imageSrc}
                           alt={callout.imageAlt}
-                          className="borde"
+                          className=" rounded-lg bg-gray-300"
                         />
                         <div
                           className="absolute top-4 left-4 z-10"
@@ -130,7 +131,6 @@ export default function Materias() {
                           <div style={{ textAlign: "left" }}>
                             {callout.chipTitle}
                           </div>{" "}
-                          {/* Utiliza el título personalizado del chip */}
                         </div>
                       </Link>
                   </div>

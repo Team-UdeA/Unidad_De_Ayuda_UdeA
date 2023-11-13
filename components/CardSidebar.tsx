@@ -48,7 +48,7 @@ export default function CardSidebar({ slug }: { slug: string }) {
             alt="nextui logo"
             height={40}
             radius="sm"
-            src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
+            src="https://static.arteinformado.com/resources/app/docs/organizacion/20/119620/universidad_de_antioquia.jpg"
             width={40}
           />
           <div className="flex flex-col">

@@ -1,14 +1,11 @@
 'use client'
 import React, { useState, useEffect } from "react";
-import Show from "@/components/Show";
 import Sidebar from "@/components/Sidebar";
 import CardSidebar from "@/components/CardSidebar";
-import TapPartial from "@/components/TabPartial";
 import { useSelector } from 'react-redux';
 import {Card, CardBody, CardFooter, Image} from "@nextui-org/react";
 import Link from "next/link";
 import { Button } from "@nextui-org/button";
-import { button } from "@nextui-org/theme";
 
 
 interface ApiElement {
@@ -77,7 +74,11 @@ export default function Page({ params }: { params: { slug: string } }) {
 
   return (
     <div>
-      My Post: {params.slug}
+      <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-5xl lg:leading-normal font-extrabold">
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
+        {params.slug}
+        </span>
+      </h1>
       <div className="flex justify-center mb-5">
         <Button 
           variant={activeButton === 'Parcial 1' ? 'flat' : undefined}

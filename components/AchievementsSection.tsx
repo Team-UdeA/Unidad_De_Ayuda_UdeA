@@ -22,7 +22,11 @@ const achievementsList = [
   },
   {
     metric: "Materias",
-    value: "10",
+    value: "7",
+  },
+  {
+    metric: "Years",
+    value: "5",
   },
 ];
 
@@ -38,7 +42,7 @@ const AchievementsSection = () => {
             >
               <h2 className="light light:text-black  dark dark:text-white text-4xl font-bold flex flex-row ">
                 {achievement.prefix}
-                <div className="light light:text-black  dark dark:text-white text-4xl font-bold">
+                <div className=" text-4xl font-bold">
                   <AnimatedNumbers
                     includeComma
                     animateToNumber={parseInt(achievement.value)}
@@ -54,7 +58,7 @@ const AchievementsSection = () => {
                 </div>
                 {achievement.postfix}
               </h2>
-              <p className="text-[#ADB7BE] text-base">{achievement.metric}</p>
+              <p className="light light:text-black  dark dark:text-white text-base">{achievement.metric}</p>
             </div>
           );
         })}

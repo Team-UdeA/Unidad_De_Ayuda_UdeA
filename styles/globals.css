@@ -17,3 +17,10 @@
   border-radius: 0px;
 }
 
+@layer utilities {
+  .text-gradient {
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(90deg, #100f0f, #070f09);
+  }
+}
