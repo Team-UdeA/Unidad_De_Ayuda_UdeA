@@ -11,22 +11,18 @@ const AnimatedNumbers = dynamic(
 
 const achievementsList = [
   {
-    metric: "Projects",
+    metric: "clases",
     value: "100",
     postfix: "+",
   },
   {
     prefix: "~",
-    metric: "Users",
+    metric: "videos",
     value: "100,000",
   },
   {
-    metric: "Awards",
-    value: "7",
-  },
-  {
-    metric: "Years",
-    value: "5",
+    metric: "Materias",
+    value: "10",
   },
 ];
 
@@ -40,7 +36,7 @@ const AchievementsSection = () => {
               key={index}
               className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0 "
             >
-              <h2 className="text-black text-4xl font-bold flex flex-row ">
+              <h2 className="light light:text-black  dark dark:text-white text-4xl font-bold flex flex-row ">
                 {achievement.prefix}
                 <div className="light light:text-black  dark dark:text-white text-4xl font-bold">
                   <AnimatedNumbers
