@@ -111,6 +111,7 @@ export default function Materias() {
                           style={{ height: "320px"}}
                           src={callout.imageSrc}
                           alt={callout.imageAlt}
+                          className="borde"
                         />
                         <div
                           className="absolute top-4 left-4 z-10"
