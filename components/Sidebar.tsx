@@ -8,6 +8,8 @@ import { PlayCircleIcon } from "@/components/PlayCircleIcon";
 import { LayoutIcon } from "@/components/LayoutIcon";
 import { useDispatch, useSelector } from 'react-redux';
 import { setSelectedItem } from '../redux/actions';
+import {TagIcon} from "@/components/TagIcon";
+import { BookIcon } from "@/components/BookIcon";
 
 interface RootState {
   selectedItem: string; // Asegúrate de que el tipo coincida con el estado en tu aplicación
@@ -37,17 +39,17 @@ export default function Sidebar() {
             "px-3 first:rounded-t-medium last:rounded-b-medium rounded-none gap-3 h-12 data-[hover=true]:bg-default-100/80",
         }}
       >
-        <ListboxItem
-          key="clase"
-          startContent={
-            <IconWrapper className="bg-success/10 text-success">
-              <BugIcon className="text-lg " />
-            </IconWrapper>
-          }
-          className={`${
-            selectedItem === "clase" ? "pointer-events-none bg-success" : ""
-          }`}
-        >
+      <ListboxItem
+        key="clase"
+        startContent={
+          <IconWrapper className="bg-danger/10 text-danger dark:text-danger-500">
+            <BookIcon />
+          </IconWrapper>
+        }
+        className={`${
+          selectedItem === "clase" ? "pointer-events-none bg-success" : ""
+        }`}
+      >
           Clases
         </ListboxItem>
         <ListboxItem
@@ -64,16 +66,16 @@ export default function Sidebar() {
           Talleres
         </ListboxItem>
         <ListboxItem
-          key="parcial"
-          startContent={
-            <IconWrapper className="bg-secondary/10 text-secondary">
-              <ChatIcon className="text-lg " />
-            </IconWrapper>
-          }
-          className={`${
-            selectedItem === "parcial" ? "pointer-events-none bg-success" : ""
-          }`}
-        >
+        key="parcial"
+        startContent={
+          <IconWrapper className="bg-primary/10 text-primary">
+            <TagIcon className="text-lg" />
+          </IconWrapper>
+        }
+        className={`${
+          selectedItem === "parcial" ? "pointer-events-none bg-success" : ""
+        }`}
+      >
           Parciales
         </ListboxItem>
         <ListboxItem

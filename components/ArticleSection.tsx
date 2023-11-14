@@ -10,7 +10,7 @@ const projectsData = [
     title: "Eloquent JavaScript",
     description: "¡Descubre el Poder de JavaScript! 🚀",
     image:'https://eloquentjavascript.net/img/cover.jpg',
-    tag: ["Todo", "Programacion"],
+    tag: ["Todo", "Programación"],
     gitUrl: "https://eloquentjavascript.net/",
     previewUrl: "https://eloquentjavascript.net/",
   },
@@ -66,8 +66,8 @@ const ArticleSection = () => {
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Programacion"
-          isSelected={tag === "Programacion"}
+          name="Programación"
+          isSelected={tag === "Programación"}
         />
         <ProjectTag
           onClick={handleTagChange}

@@ -10,6 +10,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col   dark:bg-[#000000]  text-black" >  
       <div className="container mt-24 pl-2 py-4">
+        <MathSymbolAnimation/>
         <TitleHome />
         <AchievementsSection />
         <AboutSection />

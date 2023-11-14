@@ -68,6 +68,22 @@ export default function Page({ params }: { params: { slug: string } }) {
     }
   };
 
+  const reemplazarYCapitalizar = (cadena) => {
+      // Reemplazar caracteres
+      const caracterBuscado = "-";
+      const caracterReemplazo = " ";
+      cadena = cadena.replace(new RegExp(caracterBuscado, 'g'), caracterReemplazo);
+    
+      // Capitalizar la primera letra de cada palabra
+      var palabras = cadena.split(" ");
+      for (var i = 0; i < palabras.length; i++) {
+        palabras[i] = palabras[i].charAt(0).toUpperCase() + palabras[i].slice(1);
+      }
+      cadena = palabras.join(" ");
+    
+      return cadena;
+  };
+
   React.useEffect(() => {
     console.log('Estado de Redux:', selectedItem);
   }, [selectedItem]);
@@ -76,7 +92,7 @@ export default function Page({ params }: { params: { slug: string } }) {
     <div>
       <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-5xl lg:leading-normal font-extrabold">
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
-        {params.slug}
+          {reemplazarYCapitalizar(params.slug)}
         </span>
       </h1>
       <div className="flex justify-center mb-5">
