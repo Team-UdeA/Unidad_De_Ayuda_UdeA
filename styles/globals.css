@@ -8,6 +8,7 @@
     fill: #0de643; /* Cambia "red" al color que desees */
   }
 
+
   
 
 #gradiente{
@@ -24,4 +25,6 @@
     color: transparent;
     background-image: linear-gradient(90deg, #100f0f, #070f09);
   }
+
 }
+

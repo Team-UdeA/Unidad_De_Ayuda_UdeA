@@ -22,12 +22,10 @@ const achievementsList = [
   },
   {
     metric: "Materias",
-    value: "7",
-  },
-  {
-    metric: "Years",
-    value: "5",
-  },
+
+    value: "10",
+  }
+
 ];
 
 const AchievementsSection = () => {

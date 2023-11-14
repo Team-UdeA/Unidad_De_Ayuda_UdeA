@@ -22,7 +22,9 @@ const TitleHome = () => {
             <br></br>
             <TypeAnimation
               sequence={[
-                "Einstein Dijo..",
+
+                "Einstein Dijo:",
+
                 1000,
                 '"'+'El Genio se hace',
                 1000,
