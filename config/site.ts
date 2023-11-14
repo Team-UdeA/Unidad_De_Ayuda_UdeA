@@ -15,6 +15,8 @@ export const siteConfig = {
     {
       label: "Fechas De Examenes",
       href: "/examenes",
+
+
     },
 
 	],

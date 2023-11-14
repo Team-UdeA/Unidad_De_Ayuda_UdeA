@@ -8,8 +8,10 @@ import { PlayCircleIcon } from "@/components/PlayCircleIcon";
 import { LayoutIcon } from "@/components/LayoutIcon";
 import { useDispatch, useSelector } from 'react-redux';
 import { setSelectedItem } from '../redux/actions';
+
 import {TagIcon} from "@/components/TagIcon";
 import { BookIcon } from "@/components/BookIcon";
+
 
 interface RootState {
   selectedItem: string; // Asegúrate de que el tipo coincida con el estado en tu aplicación
@@ -39,6 +41,7 @@ export default function Sidebar() {
             "px-3 first:rounded-t-medium last:rounded-b-medium rounded-none gap-3 h-12 data-[hover=true]:bg-default-100/80",
         }}
       >
+
       <ListboxItem
         key="clase"
         startContent={
@@ -50,6 +53,7 @@ export default function Sidebar() {
           selectedItem === "clase" ? "pointer-events-none bg-success" : ""
         }`}
       >
+
           Clases
         </ListboxItem>
         <ListboxItem
@@ -66,6 +70,7 @@ export default function Sidebar() {
           Talleres
         </ListboxItem>
         <ListboxItem
+
         key="parcial"
         startContent={
           <IconWrapper className="bg-primary/10 text-primary">
@@ -76,6 +81,7 @@ export default function Sidebar() {
           selectedItem === "parcial" ? "pointer-events-none bg-success" : ""
         }`}
       >
+
           Parciales
         </ListboxItem>
         <ListboxItem

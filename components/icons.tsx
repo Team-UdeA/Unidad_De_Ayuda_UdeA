@@ -24,7 +24,9 @@ export const Logo: React.FC<IconSvgProps> = ({
 	</svg>
 );
 
+
 export const FacebookIcon:React.FC<IconSvgProps> = ({ size = 24, width, height, ...props }) => (
+
 	<svg
 	  fill="none"
 	  height={size}
@@ -65,7 +67,9 @@ export const TwitterIcon: React.FC<IconSvgProps> = ({
 
 
 
+
 const InstagramIcon:React.FC<IconSvgProps> = ({ size = 24, color = 'currentColor', ...props }) => {
+
 	return (
 	  <svg
 		xmlns="http://www.w3.org/2000/svg"

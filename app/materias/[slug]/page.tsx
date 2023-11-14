@@ -68,6 +68,7 @@ export default function Page({ params }: { params: { slug: string } }) {
     }
   };
 
+
   const reemplazarYCapitalizar = (cadena) => {
       // Reemplazar caracteres
       const caracterBuscado = "-";
@@ -84,6 +85,7 @@ export default function Page({ params }: { params: { slug: string } }) {
       return cadena;
   };
 
+
   React.useEffect(() => {
     console.log('Estado de Redux:', selectedItem);
   }, [selectedItem]);
@@ -92,7 +94,9 @@ export default function Page({ params }: { params: { slug: string } }) {
     <div>
       <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-5xl lg:leading-normal font-extrabold">
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
+
           {reemplazarYCapitalizar(params.slug)}
+
         </span>
       </h1>
       <div className="flex justify-center mb-5">
